@@ -98,7 +98,7 @@ class categories extends StatelessWidget {
                 SizedBox(
                   width: 142,
                   height: 50,
-                  child: solidButton(text:'Previous' , onTap: (){})),
+                  child: solidButton(text:'Skip' , onTap: (){})),
                    SizedBox(
                   width: 142,
                   height: 50,
