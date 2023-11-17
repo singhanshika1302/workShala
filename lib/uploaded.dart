@@ -11,6 +11,7 @@ class uploaded extends StatefulWidget {
 class _uploadedState extends State<uploaded> {
   @override
   Widget build(BuildContext context) {
+    final size= MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -19,7 +20,7 @@ class _uploadedState extends State<uploaded> {
 
           child: Column(
             children: [
-              SizedBox(height:70.0),
+              SizedBox(height:size.height*0.07),
               Row(
                 children: [
 
@@ -60,14 +61,14 @@ class _uploadedState extends State<uploaded> {
                       height: 60.0,
                       width: 60.0,
                     ),
-                    SizedBox(height:10.0),
+                    SizedBox(height:size.height*0.025),
                     Text('UI/UX Designer',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 25.0,
                         fontWeight: FontWeight.bold,
                       ),),
-                    SizedBox(height: 10.0),
+                    SizedBox(height:size.height*0.015),
                     Text('Google LLC',
                       style: TextStyle(
                         color: Colors.blue,
@@ -75,7 +76,7 @@ class _uploadedState extends State<uploaded> {
                         fontWeight: FontWeight.bold,
                       ),),
 
-                    SizedBox(height: 20.0),
+                    SizedBox(height: size.height*0.003),
 
                     Text('California,United States',
                       style: TextStyle(
@@ -83,7 +84,7 @@ class _uploadedState extends State<uploaded> {
                         fontSize: 15.0,
                         fontWeight: FontWeight.bold,
                       ),),
-                    SizedBox(height: 20.0),
+                    SizedBox(height:size.height*0.03),
                     Text('\$10,000-\$25,000/month',
                       style: TextStyle(
                         color: Color(0xFF946CC3),
@@ -111,7 +112,7 @@ class _uploadedState extends State<uploaded> {
                               ),
                             ),
                           ),
-                          SizedBox(width:20.0),
+                          SizedBox(width:size.width*0.04),
                           Container(
                             padding: EdgeInsets.fromLTRB(25.0, 5.0, 23.0, 5.0),
                             decoration: BoxDecoration(
@@ -133,7 +134,7 @@ class _uploadedState extends State<uploaded> {
                       ),
 
                     ),
-                    SizedBox(height: 30.0),
+                    SizedBox(height:size.height*0.02),
                     Text(
                       'Posted 10 Days ago,ends in 25 Dec.',
                       style: TextStyle(color: Colors.black,
@@ -144,6 +145,10 @@ class _uploadedState extends State<uploaded> {
                   ],
                 ),
               ),
+              Image.asset('assets/cv.png',
+              ),
+              SizedBox(height:size.height*0.03),
+
               Text('Successful',
                 style: TextStyle(color: Colors.blue,
                   fontSize: 30.0,
@@ -176,7 +181,7 @@ class _uploadedState extends State<uploaded> {
                   padding: EdgeInsets.fromLTRB(110.0, 15.0, 110.0, 15.0),
                 ),
               ),
-              SizedBox(height: 10.0),
+              SizedBox(height: size.height*0.02),
               OutlinedButton(
 
                 onPressed: (){},
@@ -198,6 +203,7 @@ class _uploadedState extends State<uploaded> {
                   padding: EdgeInsets.fromLTRB(110.0, 15.0, 110.0, 15.0),
                 ),
               ),
+              SizedBox(height: size.height*0.02,),
             ],
           ),
         ),

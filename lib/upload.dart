@@ -9,8 +9,10 @@ import 'package:workshala/uploading.dart';
 class upload extends StatefulWidget {
   const upload({super.key});
 
+
   @override
   State<upload> createState() => _upload();
+
 }
 class _upload extends State<upload> {
 
@@ -46,6 +48,7 @@ class _upload extends State<upload> {
   }
   @override
   Widget build(BuildContext context) {
+    final size= MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       body: Center(
@@ -137,7 +140,7 @@ class _upload extends State<upload> {
                             ),
                           ),
                         ),
-                        SizedBox(width:20.0),
+                        SizedBox(width:size.width*0.04),
                         Container(
                           padding: EdgeInsets.fromLTRB(25.0, 5.0, 23.0, 5.0),
                           decoration: BoxDecoration(
@@ -159,7 +162,7 @@ class _upload extends State<upload> {
                     ),
 
                   ),
-                  SizedBox(height: 30.0),
+                  SizedBox(height: size.height*0.002),
                   Text(
                     'Posted 10 Days ago,ends in 25 Dec.',
                     style: TextStyle(color: Colors.black,
@@ -193,7 +196,7 @@ class _upload extends State<upload> {
                 fontSize: 20.0,
 
               ),),
-            SizedBox(height: 50.0),
+            SizedBox(height: size.height*0.025,),
             ElevatedButton(
               onPressed: (){
                 Navigator.push(context,MaterialPageRoute(builder: (BuildContext context)

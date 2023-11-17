@@ -13,6 +13,7 @@ class uploading extends StatefulWidget {
 class _uploadingState extends State<uploading> {
   @override
   Widget build(BuildContext context) {
+    final size= MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -38,7 +39,7 @@ class _uploadingState extends State<uploading> {
                     icon: Icon(Icons.arrow_back),
                   ),
 
-                  SizedBox(width:10.0),
+                  SizedBox(width:size.width*0.02),
                   Text('Details',
                     style: TextStyle(
                       color: Colors.black,
@@ -62,14 +63,14 @@ class _uploadingState extends State<uploading> {
                       height: 60.0,
                       width: 60.0,
                     ),
-                    SizedBox(height:10.0),
+                    SizedBox(height:size.height*0.025),
                     Text('UI/UX Designer',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 25.0,
                         fontWeight: FontWeight.bold,
                       ),),
-                    SizedBox(height: 10.0),
+                    SizedBox(height:size.height*0.015),
                     Text('Google LLC',
                       style: TextStyle(
                         color: Colors.blue,
@@ -77,7 +78,7 @@ class _uploadingState extends State<uploading> {
                         fontWeight: FontWeight.bold,
                       ),),
 
-                    SizedBox(height: 20.0),
+                    SizedBox(height: size.height*0.003),
 
                     Text('California,United States',
                       style: TextStyle(
@@ -85,7 +86,7 @@ class _uploadingState extends State<uploading> {
                         fontSize: 15.0,
                         fontWeight: FontWeight.bold,
                       ),),
-                    SizedBox(height: 20.0),
+                    SizedBox(height:size.height*0.03),
                     Text('\$10,000-\$25,000/month',
                       style: TextStyle(
                         color: Color(0xFF946CC3),
@@ -113,7 +114,7 @@ class _uploadingState extends State<uploading> {
                               ),
                             ),
                           ),
-                          SizedBox(width:20.0),
+                          SizedBox(width:size.width*0.04),
                           Container(
                             padding: EdgeInsets.fromLTRB(25.0, 5.0, 23.0, 5.0),
                             decoration: BoxDecoration(
@@ -135,7 +136,7 @@ class _uploadingState extends State<uploading> {
                       ),
 
                     ),
-                    SizedBox(height: 30.0),
+                    SizedBox(height:size.height*0.02),
                     Text(
                       'Posted 10 Days ago,ends in 25 Dec.',
                       style: TextStyle(color: Colors.black,
@@ -186,7 +187,7 @@ class _uploadingState extends State<uploading> {
 
                 ),
               ),
-              SizedBox(height:20.0),
+              SizedBox(height:size.height*0.03),
               Text('Uploading...',
                 style: TextStyle(color: Colors.blue,
                   fontSize: 25.0,
