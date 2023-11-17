@@ -1,12 +1,11 @@
 import 'dart:convert';
-
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:workshala/Auth%20Screens/SignUpPage.dart';
 import 'package:workshala/NavBar.dart';
 import 'package:http/http.dart' as http;
-
 import '../Utilities.dart';
 
 class LoginPage extends StatefulWidget {
@@ -36,12 +35,21 @@ class _LoginPageState extends State<LoginPage> {
       );
 
      print(response.statusCode);
+      print('Response Body: ${response.body}');
 
       if (response.statusCode == 200) {
         final Map<String, dynamic> responseData = json.decode(response.body);
+        final String accessToken = responseData['access_token'];
+        final String refreshToken = responseData['refresh_token'];
         final message = responseData['message'];
 
         print('Message from API: $message');
+        print('Refresh Token: $refreshToken');
+        print('Access Token: $accessToken');
+
+        final storage = FlutterSecureStorage();
+        await storage.write(key: 'access_token', value: accessToken);
+        await storage.write(key: 'refresh_token', value: refreshToken);
 
         // Now navigate to the next screen
         Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => NavBar()));
@@ -80,6 +88,7 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+
 
 
 
