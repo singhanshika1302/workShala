@@ -58,6 +58,7 @@ packages:
     source: hosted
     version: "1.17.2"
 <<<<<<< HEAD
+<<<<<<< HEAD
   crypto:
     dependency: transitive
     description:
@@ -76,6 +77,8 @@ packages:
     source: hosted
     version: "0.3.3+6"
 >>>>>>> srishtikaura
+=======
+>>>>>>> AdityaLohani
   cupertino_icons:
     dependency: "direct main"
     description:
@@ -84,6 +87,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.6"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   curved_navigation_bar:
@@ -111,6 +115,8 @@ packages:
     source: hosted
     version: "2.1.17"
 >>>>>>> srishtikaura
+=======
+>>>>>>> AdityaLohani
   fake_async:
     dependency: transitive
     description:
@@ -127,6 +133,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.0"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   file:
@@ -170,6 +177,16 @@ packages:
     source: hosted
     version: "0.9.3+1"
 >>>>>>> srishtikaura
+=======
+  file_picker:
+    dependency: "direct main"
+    description:
+      name: file_picker
+      sha256: "4e42aacde3b993c5947467ab640882c56947d9d27342a5b6f2895b23956954a6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.1"
+>>>>>>> AdityaLohani
   flutter:
     dependency: "direct main"
     description: flutter
@@ -184,7 +201,10 @@ packages:
     source: hosted
     version: "2.0.3"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> AdityaLohani
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -193,6 +213,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.17"
+<<<<<<< HEAD
   flutter_secure_storage:
     dependency: "direct main"
     description:
@@ -242,11 +263,14 @@ packages:
     source: hosted
     version: "1.1.3"
 >>>>>>> srishtikaura
+=======
+>>>>>>> AdityaLohani
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
 <<<<<<< HEAD
   font_awesome_flutter:
     dependency: "direct main"
@@ -267,11 +291,14 @@ packages:
   http:
     dependency: transitive
 =======
+=======
+>>>>>>> AdityaLohani
   flutter_web_plugins:
     dependency: transitive
     description: flutter
     source: sdk
     version: "0.0.0"
+<<<<<<< HEAD
   google_nav_bar:
     dependency: "direct main"
     description:
@@ -283,6 +310,10 @@ packages:
   http:
     dependency: "direct main"
 >>>>>>> srishtikaura
+=======
+  http:
+    dependency: "direct main"
+>>>>>>> AdityaLohani
     description:
       name: http
       sha256: "759d1a329847dd0f39226c688d3e06a6b8679668e350e2891a6474f8b4bb8525"
@@ -297,6 +328,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   image_picker:
@@ -372,6 +404,8 @@ packages:
     source: hosted
     version: "0.6.7"
 >>>>>>> srishtikaura
+=======
+>>>>>>> AdityaLohani
   lints:
     dependency: transitive
     description:
@@ -380,6 +414,17 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+<<<<<<< HEAD
+=======
+  loading_animation_widget:
+    dependency: "direct main"
+    description:
+      name: loading_animation_widget
+      sha256: "1901682600273a966c34cf44a85fc5355da92a8d08a8a43c11adc4e471993e3a"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.2.0+4"
+>>>>>>> AdityaLohani
   matcher:
     dependency: transitive
     description:
@@ -405,6 +450,7 @@ packages:
     source: hosted
     version: "1.9.1"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   mime:
     dependency: transitive
@@ -423,6 +469,8 @@ packages:
     source: hosted
     version: "2.1.0"
 >>>>>>> srishtikaura
+=======
+>>>>>>> AdityaLohani
   path:
     dependency: transitive
     description:
@@ -431,6 +479,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.8.3"
+<<<<<<< HEAD
 <<<<<<< HEAD
   path_provider:
     dependency: transitive
@@ -490,6 +539,8 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.3"
+=======
+>>>>>>> AdityaLohani
   plugin_platform_interface:
     dependency: transitive
     description:
@@ -498,6 +549,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.6"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   shared_preferences:
@@ -557,11 +609,14 @@ packages:
     source: hosted
     version: "2.3.2"
 >>>>>>> srishtikaura
+=======
+>>>>>>> AdityaLohani
   sky_engine:
     dependency: transitive
     description: flutter
     source: sdk
     version: "0.0.99"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   snippet_coder_utils:
@@ -573,6 +628,8 @@ packages:
     source: hosted
     version: "1.0.15"
 >>>>>>> srishtikaura
+=======
+>>>>>>> AdityaLohani
   source_span:
     dependency: transitive
     description:
@@ -581,6 +638,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.10.0"
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   sqflite:
@@ -600,6 +658,8 @@ packages:
     source: hosted
     version: "2.5.0+2"
 >>>>>>> srishtikaura
+=======
+>>>>>>> AdityaLohani
   stack_trace:
     dependency: transitive
     description:
@@ -625,6 +685,7 @@ packages:
     source: hosted
     version: "1.2.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   synchronized:
     dependency: transitive
@@ -635,6 +696,8 @@ packages:
     source: hosted
     version: "3.1.0"
 >>>>>>> srishtikaura
+=======
+>>>>>>> AdityaLohani
   term_glyph:
     dependency: transitive
     description:
@@ -680,15 +743,19 @@ packages:
     description:
       name: win32
 <<<<<<< HEAD
+<<<<<<< HEAD
       sha256: "350a11abd2d1d97e0cc7a28a81b781c08002aa2864d9e3f192ca0ffa18b06ed3"
       url: "https://pub.dev"
     source: hosted
     version: "5.0.9"
 =======
+=======
+>>>>>>> AdityaLohani
       sha256: "7c99c0e1e2fa190b48d25c81ca5e42036d5cac81430ef249027d97b0935c553f"
       url: "https://pub.dev"
     source: hosted
     version: "5.1.0"
+<<<<<<< HEAD
 >>>>>>> srishtikaura
   xdg_directories:
     dependency: transitive
@@ -704,4 +771,8 @@ sdks:
 =======
   dart: ">=3.1.5 <4.0.0"
 >>>>>>> srishtikaura
+=======
+sdks:
+  dart: ">=3.1.4 <4.0.0"
+>>>>>>> AdityaLohani
   flutter: ">=3.7.0"
