@@ -25,19 +25,19 @@ class JobsRepository {
   }
 }
 
-   Future<UserDetailModel> Fetchprofileapi(String authToken) async {
+  // Future<UserDetailModel> Fetchprofileapi(String authToken) async {
     
-    String url = "https://workshala.onrender.com/profile";
+   // String url = "https://workshala.onrender.com/profile";
 
-    final response = await http.get(Uri.parse(url),
-    headers: {'Authorization': 'Bearer $authToken'},
-    );
+   // final response = await http.get(Uri.parse(url),
+   // headers: {'Authorization': 'Bearer $authToken'},
+    //);
 
-    if (response.statusCode == 200) {
-      final body = jsonDecode(response.body);
-      return UserDetailModel.fromJson(body);
-    }
-    throw Exception('Error');
-  }
+    //if (response.statusCode == 200) {
+      //final body = jsonDecode(response.body);
+     // return UserDetailModel.fromJson(body);
+    //}
+    //throw Exception('Error');
+  //}
 
 

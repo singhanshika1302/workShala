@@ -13,8 +13,8 @@ class JobsViewModel {
     return response;
   }
 
-   Future<UserDetailModel> Fetchprofileapi(String authToken) async {
-    final response = await _rep.Fetchprofileapi(authToken);
-    return response;
-  }
+  // Future<UserDetailModel> Fetchprofileapi(String authToken) async {
+   // final response = await _rep.Fetchprofileapi(authToken);
+   // return response;
+  //}
 }
