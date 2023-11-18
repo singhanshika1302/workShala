@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:workshala/models/anshika_datamodel_jobs.dart';
 import 'package:workshala/utils/Utilities.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
@@ -297,44 +298,52 @@ class _HomePageState extends State<HomePage> {
 
 //api integrated for jobs anshika
              
-              Expanded(
-            child: Container(
-              // height: height * 0.35,
-              child: FutureBuilder(
-                  future: jobsViewModel.FetchJobsapi(),
-                  builder: (BuildContext context, snapshot) {
-                    if (snapshot.connectionState == ConnectionState.waiting) {
-                      return CircularProgressIndicator(
-                        color: Colors.black,
-                      );
-                    } else if (snapshot.hasError) {
-                      print('Error: ${snapshot.error}');
-                      return Center(
-                        child: Text('Error loading data'),
-                      );
-                    } else if (snapshot.data == null ||
-                        snapshot.data!.companyName == null) {
-                      return Center(
-                        child: Text('No data available'),
-                      );
-                    } else {
-                      return ListView.builder(
+             Container(
+                  height: 400,
+                  child: FutureBuilder<List<JobsApiModel>>(
+                    future: jobsViewModel.FetchJobsapi(),
+                    builder: (BuildContext context,
+                        AsyncSnapshot<List<JobsApiModel>> snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return CircularProgressIndicator(
+                          color: Colors.black,
+                        );
+                      } else if (snapshot.hasError) {
+                        print('Error: ${snapshot.error}');
+                        return Center(
+                          child: Text('Error loading data'),
+                        );
+                      } else if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                        return Center(
+                          child: Text('No data available'),
+                        );
+                      } else {
+                        return ListView.builder(
                           shrinkWrap: true,
                           scrollDirection: Axis.vertical,
-                          itemCount: snapshot.data!.companyName!.length,
+                          itemCount: snapshot.data!.length,
                           itemBuilder: (context, index) {
-                            
-                              
+                            JobsApiModel job = snapshot.data![index];
+
                             return Padding(
                               padding: const EdgeInsets.all(15.0),
-                              child: RecentJobsBlock(snapshot.data!.imageUrl.toString(), snapshot.data!.description.toString(), snapshot.data!.companyName.toString(),
-                                              'California, United States', snapshot.data!.stipend.toString()),
+                              child: RecentJobsBlock(
+                                job.imageUrl ??
+                                    '', // Handle null or empty imageUrl
+                                job.description ??
+                                    '', // Handle null or empty description
+                                job.companyName ??
+                                    '', // Handle null or empty companyName
+                                'California, United States',
+                                job.stipend ??
+                                    '', // Handle null or empty stipend
+                              ),
                             );
-                          });
-                    }
-                  }),
-            ),
-          )
+                          },
+                        );
+                      }
+                    },
+                  ))
               
 
             ],

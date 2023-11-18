@@ -8,7 +8,7 @@ class JobsViewModel {
   final _rep = JobsRepository();
 
   
-  Future<JobsApiModel> FetchJobsapi() async {
+  Future<List<JobsApiModel>> FetchJobsapi() async {
     final response = await _rep.FetchJobsapi();
     return response;
   }

@@ -8,17 +8,22 @@ import 'package:workshala/models/anshika_datamodel_jobs.dart';
 class JobsRepository {
 
 
-  Future<JobsApiModel> FetchJobsapi() async {
+  
+  Future<List<JobsApiModel>> FetchJobsapi() async {
     String url = "https://workshala.onrender.com/jobs";
 
     final response = await http.get(Uri.parse(url));
 
     if (response.statusCode == 200) {
-      final body = jsonDecode(response.body);
-      return JobsApiModel.fromJson(body);
+      List<dynamic> body = jsonDecode(response.body);
+      List<JobsApiModel> jobsList =
+          body.map((job) => JobsApiModel.fromJson(job)).toList();
+
+      return jobsList;
     }
     throw Exception('Error');
   }
+}
 
    Future<UserDetailModel> Fetchprofileapi(String authToken) async {
     
@@ -34,5 +39,5 @@ class JobsRepository {
     }
     throw Exception('Error');
   }
-}
+
 
