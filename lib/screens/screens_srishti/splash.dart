@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
-import 'package:workshala/AfterSplash.dart';
+import 'package:workshala/screens/screens_srishti/AfterSplash.dart';
 
 class Splash extends StatefulWidget {
   const Splash({Key? key}) : super(key: key);

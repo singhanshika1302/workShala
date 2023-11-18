@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:workshala/Auth%20Screens/SignUpPage.dart';
-import 'package:workshala/HomePage.dart';
-import 'package:workshala/NavBar.dart';
+import 'package:workshala/screens/screens_Aditya/signup.dart';
+
+import 'package:workshala/screens/screens_srishti/HomePage.dart';
+import 'package:workshala/screens/screens_srishti/NavBar.dart';
 
 
 class AfterSpalsh extends StatefulWidget {

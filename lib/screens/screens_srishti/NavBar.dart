@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:workshala/CoursesPage.dart';
-import 'package:workshala/HomePage.dart';
-import 'package:workshala/JobsPage.dart';
-import 'package:workshala/ProfilePage.dart';
+import 'package:workshala/screens/screens_Anshika/CoursesPage.dart';
+import 'package:workshala/screens/screens_srishti/HomePage.dart';
+import 'package:workshala/screens/screens_Anshika/JobsPage.dart';
+import 'package:workshala/screens/screens_srishti/ProfilePage.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
 class NavBar extends StatefulWidget {

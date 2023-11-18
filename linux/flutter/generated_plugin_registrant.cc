@@ -6,8 +6,6 @@
 
 #include "generated_plugin_registrant.h"
 
-
-void fl_register_plugins(FlPluginRegistry* registry) {
 #include <file_selector_linux/file_selector_plugin.h>
 #include <flutter_secure_storage_linux/flutter_secure_storage_linux_plugin.h>
 

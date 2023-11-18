@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 
-<<<<<<< HEAD
 Widget RecommendedCourses(width, selectedTag, courseName){
   return Padding(
     padding: const EdgeInsets.only(right: 30),
@@ -164,7 +163,7 @@ Widget RecentJobsBlock(image, String jobTitle, String companyName, String locati
                           ),
                           child: Padding(
                             padding: const EdgeInsets.all(10.0),
-                            child: Image.asset(image ,scale: 4,),
+                            child:Image.network(image ,scale: 4,),
                           )),
                     ),
 
@@ -379,8 +378,6 @@ Widget TextformfieldSignup(
     ),
   );
 }
-=======
->>>>>>> AdityaLohani
 
 
 

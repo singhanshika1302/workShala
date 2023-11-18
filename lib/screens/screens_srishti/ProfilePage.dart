@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:workshala/Utilities.dart';
+import 'package:workshala/utils/Utilities.dart';
+import 'package:workshala/viewModel/jobs_view_model.dart';
 import 'NavBar.dart';
 import 'Settings.dart';
 
@@ -12,6 +13,8 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+
+  JobsViewModel jobsViewModel = JobsViewModel();
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -41,10 +44,32 @@ class _ProfilePageState extends State<ProfilePage> {
 
                   SizedBox(width: size.width*0.05,),
 
+                   FutureBuilder(
+                  future: jobsViewModel.Fetchprofileapi('token'),
+                  builder: (BuildContext context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return CircularProgressIndicator(
+                        color: Colors.black,
+                      );
+                    } else if (snapshot.hasError) {
+                      print('Error: ${snapshot.error}');
+                      return Center(
+                        child: Text('Error loading data'),
+                      );
+                    } else if (snapshot.data == null ||
+                        snapshot.data == null) {
+                      return Center(
+                        child: Text('No data available'),
+                      );
+                    } else {
+                      return 
+                    
+
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Text('Vidita Singh',style: TextStyle(
+                       Text('Vidita Singh',//snapshot.data!.name.toString(),
+                       style: TextStyle(
                           fontSize: 26.5,
                           color: Color(0xff946cc3),
                           fontWeight: FontWeight.bold
@@ -63,7 +88,10 @@ class _ProfilePageState extends State<ProfilePage> {
                         fontWeight: FontWeight.w500
                       ),)
                     ],
-                  ),
+                  );
+
+                   }
+                  }),
                 ],
               ),
 

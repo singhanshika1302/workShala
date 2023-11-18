@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:workshala/Utilities.dart';
+import 'package:workshala/utils/Utilities.dart';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:workshala/viewModel/jobs_view_model.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -11,6 +12,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  JobsViewModel jobsViewModel = JobsViewModel();
   bool outlinedSelected = false;
   bool isSelected= false;
 
@@ -64,6 +66,10 @@ class _HomePageState extends State<HomePage> {
       throw Exception('Failed to fetch data: $error');
     }
   }
+
+
+
+
 
 
 
@@ -289,30 +295,47 @@ class _HomePageState extends State<HomePage> {
 
               SizedBox(height: size.height*0.04,),
 
-
-              RecentJobsBlock('assets/google.png', 'UI/UX Designer', 'Google',
-                  'California, United States', '\u0024 10,000 - \u0024 25,000 / month'),
-
-
-              SizedBox(height: size.height*0.04,),
-
-
-              RecentJobsBlock('assets/github.png', 'Software Developer', 'Github',
-                  'Los Angeles, United States', '\u0024 20,000 - \u0024 30,000 / month'),
-
-              SizedBox(height: size.height*0.04,),
-
-              RecentJobsBlock('assets/google.png', 'UI/UX Designer', 'Google',
-                  'California, United States', '\u0024 10,000 - \u0024 25,000 / month'),
-
-
-              SizedBox(height: size.height*0.04,),
-
-
-              RecentJobsBlock('assets/github.png', 'Software Developer', 'Github',
-                  'Los Angeles, United States', '\u0024 20,000 - \u0024 30,000 / month'),
-
-              SizedBox(height: size.height*0.04,),
+//api integrated for jobs anshika
+             
+              Expanded(
+            child: Container(
+              // height: height * 0.35,
+              child: FutureBuilder(
+                  future: jobsViewModel.FetchJobsapi(),
+                  builder: (BuildContext context, snapshot) {
+                    if (snapshot.connectionState == ConnectionState.waiting) {
+                      return CircularProgressIndicator(
+                        color: Colors.black,
+                      );
+                    } else if (snapshot.hasError) {
+                      print('Error: ${snapshot.error}');
+                      return Center(
+                        child: Text('Error loading data'),
+                      );
+                    } else if (snapshot.data == null ||
+                        snapshot.data!.companyName == null) {
+                      return Center(
+                        child: Text('No data available'),
+                      );
+                    } else {
+                      return ListView.builder(
+                          shrinkWrap: true,
+                          scrollDirection: Axis.vertical,
+                          itemCount: snapshot.data!.companyName!.length,
+                          itemBuilder: (context, index) {
+                            
+                              
+                            return Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: RecentJobsBlock(snapshot.data!.imageUrl.toString(), snapshot.data!.description.toString(), snapshot.data!.companyName.toString(),
+                                              'California, United States', snapshot.data!.stipend.toString()),
+                            );
+                          });
+                    }
+                  }),
+            ),
+          )
+              
 
             ],
           ),

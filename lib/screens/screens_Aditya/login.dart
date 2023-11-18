@@ -1,13 +1,13 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
-import 'package:workshala/Utilities.dart';
+import 'package:workshala/utils/Utilities.dart';
 import 'signup.dart';
 
 
 
 import 'package:http/http.dart' as http;
-import 'package:workshala/jobdescription.dart';
+import 'package:workshala/screens/screens_Aditya/jobdescription.dart';
 
 
 

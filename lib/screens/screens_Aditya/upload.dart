@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import 'dart:io';
 
-import 'package:workshala/uploaded.dart';
-import 'package:workshala/uploading.dart';
+import 'package:workshala/screens/screens_Aditya/uploaded.dart';
+import 'package:workshala/screens/screens_Aditya/uploading.dart';
 
 
 class upload extends StatefulWidget {

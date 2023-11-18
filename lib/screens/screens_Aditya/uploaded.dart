@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:workshala/upload.dart';
-import 'package:workshala/uploaded.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
+import 'package:workshala/screens/screens_Aditya/uploading.dart';
 
-class uploading extends StatefulWidget {
-  const uploading({super.key});
+class uploaded extends StatefulWidget {
+  const uploaded({super.key});
 
   @override
-  State<uploading> createState() => _uploadingState();
+  State<uploaded> createState() => _uploadedState();
 }
 
-class _uploadingState extends State<uploading> {
+class _uploadedState extends State<uploaded> {
   @override
   Widget build(BuildContext context) {
     final size= MediaQuery.of(context).size;
@@ -22,7 +20,7 @@ class _uploadingState extends State<uploading> {
 
           child: Column(
             children: [
-              SizedBox(height:70.0),
+              SizedBox(height:size.height*0.07),
               Row(
                 children: [
 
@@ -30,7 +28,7 @@ class _uploadingState extends State<uploading> {
                     onPressed: (){
                       Navigator.push(context,MaterialPageRoute(builder: (BuildContext context)
                       {
-                        return upload();
+                        return uploading();
 
                       },
                       ),
@@ -39,7 +37,7 @@ class _uploadingState extends State<uploading> {
                     icon: Icon(Icons.arrow_back),
                   ),
 
-                  SizedBox(width:size.width*0.02),
+                  SizedBox(width:10.0),
                   Text('Details',
                     style: TextStyle(
                       color: Colors.black,
@@ -147,81 +145,65 @@ class _uploadingState extends State<uploading> {
                   ],
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.all(20.0),
-                child:Container(
-
-                  height: 300,
-                  width: 500,
-
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25.0),
-                    border: Border.all(
-                      color: Colors.blueAccent,
-                      width: 3,
-                    ),
-                  ),
-                  child:Center(
-
-
-                    child:LoadingAnimationWidget.stretchedDots(
-                      color: Colors.blue,
-                      size: 100,
-
-
-                    ),
-
-
-                  ),
-
-
-
-
-
-
-
-
-
-
-
-
-                ),
+              Image.asset('assets/cv.png',
               ),
               SizedBox(height:size.height*0.03),
-              Text('Uploading...',
+
+              Text('Successful',
                 style: TextStyle(color: Colors.blue,
-                  fontSize: 25.0,
+                  fontSize: 30.0,
                   fontWeight: FontWeight.bold,
-                ),),
-              SizedBox(height: 30.0),
-
-
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(25.0),
+                child:Text('You have successfully applied to this internship.'
+                    'you can see the status in the “applications” section.',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15.0,
+                  ),),
+              ),
               ElevatedButton(
-                onPressed: (){
-                  Navigator.push(context,MaterialPageRoute(builder: (BuildContext context)
-                  {
-                    return uploaded();
-
-                  },
-                  ),
-                  );
-                },
-                child: Text('Cancel',
+                onPressed: (){},
+                child: Text('My Applications',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 20.0,
-                    fontWeight: FontWeight.bold,
+                    fontSize: 15.0,
                   ),
                 ),
                 style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
+                    borderRadius: BorderRadius.circular(30.0),
                   ),
 
                   primary: Color(0xFF946CC3),
-                  padding: EdgeInsets.fromLTRB(50.0, 15.0, 50.0, 15.0),
+                  padding: EdgeInsets.fromLTRB(110.0, 15.0, 110.0, 15.0),
                 ),
-              )
+              ),
+              SizedBox(height: size.height*0.02),
+              OutlinedButton(
+
+                onPressed: (){},
+
+                child: Text('Discover More',
+                  style: TextStyle(
+                    color: Color(0xFF946CC3),
+                    fontSize: 15.0,
+                  ),
+                ),
+                style: OutlinedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0),
+
+                  ),
+                  side: BorderSide(width: 3.0, color: Color(0xFF946CC3)),
+
+                  primary: Color(0xFF946CC3),
+                  padding: EdgeInsets.fromLTRB(110.0, 15.0, 110.0, 15.0),
+                ),
+              ),
+              SizedBox(height: size.height*0.02,),
             ],
           ),
         ),

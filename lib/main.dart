@@ -1,22 +1,45 @@
-<<<<<<< HEAD
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:workshala/screens/screens_Aditya/jobDescription.dart';
+import 'package:workshala/screens/screens_Anshika/CoursesPage.dart';
+import 'package:workshala/screens/screens_Anshika/JobsPage.dart';
 import 'package:workshala/screens/screens_Anshika/filterPage.dart';
-
+import 'package:workshala/screens/screens_srishti/AfterSplash.dart';
+import 'package:workshala/screens/screens_srishti/HomePage.dart';
+import 'package:workshala/screens/screens_srishti/NavBar.dart';
+import 'package:workshala/screens/screens_srishti/ProfilePage.dart';
+import 'package:workshala/screens/screens_srishti/Settings.dart';
+import 'package:workshala/screens/screens_srishti/splash.dart';
 import 'screens/screens_Anshika/categories.dart';
+import 'screens/screens_Aditya/jobdescription.dart';
+import 'package:workshala/screens/screens_Aditya/signup.dart';
+import 'package:workshala/screens/screens_Aditya/login.dart';
 
 
 void main() {
   runApp( MaterialApp(
     debugShowCheckedModeBanner: false,
 
-     initialRoute: '/categories',
+     home: HomePage(),
+
+    
      routes: {
       '/categories':(context) => categories(),
       '/filter':(context) => Filter_Page(),
-      '/jobDesc':(context) => job(),
+      '/splash':(context) => Splash(),
+      '/aftersplash':(context) => AfterSpalsh(),
+      '/HomePage':(context) => HomePage(),
+      '/NavBar':(context) => NavBar(),
+      '/Profile':(context) => ProfilePage(),
+      '/settings':(context) => Settings(),
+      'coursepage':(context) => CoursesPage(),
+      '/jobspage':(context) => JobsPage(),
+      // '/jobdiscription':(context) => job(),
+      '/login':(context) => LoginPage(),
+      '/signup':(context) => SignUpPage(),
+      // '/upload':(context) => _upload(),
+    
       
      },
   ));
@@ -35,39 +58,6 @@ void main() {
 
 
 
-import 'package:workshala/splash.dart';
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Splash(),
-    );
-  }
-}
-=======
-import 'package:flutter/material.dart';
-import 'jobdescription.dart';
-import 'package:workshala/signup.dart';
-import 'package:workshala/login.dart';
-void main() {
-  runApp(
-      MaterialApp(
-        home:const password(),
-      debugShowCheckedModeBanner: false,
-      )
-  );
-}
 
 
 
@@ -199,4 +189,3 @@ class _passwordState extends State<password> {
     );
   }
 }
->>>>>>> AdityaLohani

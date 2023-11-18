@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:workshala/Utilities.dart';
+import 'package:workshala/utils/Utilities.dart';
 import 'NavBar.dart';
 import 'ProfilePage.dart';
 

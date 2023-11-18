@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:workshala/login.dart';
-import 'package:workshala/Utilities.dart';
+import 'package:workshala/screens/screens_Aditya/login.dart';
+import 'package:workshala/utils/Utilities.dart';
 import 'package:http/http.dart' as http;
 import 'jobdescription.dart';
 
